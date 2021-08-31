@@ -1,0 +1,65 @@
+$Brightorange: hsl(31, 77%, 52%);
+$Darkcyan: hsl(184, 100%, 22%);
+$Verydarkcyan: hsl(179, 100%, 13%);
+body{
+    background-color: hsl(0, 0%, 95%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+//custom classes
+.bg-Brightorange{
+    background-color:$Brightorange;
+   
+}
+
+.bg-darkcyan{
+    background-color:$Darkcyan;
+}
+.bg-verydarkcyan{
+    background-color:$Verydarkcyan;
+}
+.text-orange{
+    color:$Brightorange;
+}
+.text-cyan{
+    color:$Darkcyan;
+}
+.text-darkcyan{
+    color:$Verydarkcyan;
+}
+//custom classes
+#main{
+    max-width: 900px;
+    .card-img-top{
+        margin-bottom:1.5rem;
+    }
+    .card-body{
+        h1,p{
+            margin-bottom:2rem;
+        }
+    }
+    .card{
+        button:active{
+                background-color: transparent !important;
+                border:white 2px solid !important;
+                box-shadow:none;
+                color:white;
+        }
+    }
+}
+@media(max-width:768px){
+    body{
+        padding:2rem 0;
+    }
+    .col:nth-of-type(1) .card{
+        border-radius:0.25rem 0.25rem 0 0 !important;//left right right to left
+    }
+    .col:nth-of-type(3) .card{
+        border-radius:0 0 0.25rem 0.25rem !important;//left right right to left
+    }
+    #main{
+        max-width: 400px;
+    }
+}
